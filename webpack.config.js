@@ -1,7 +1,7 @@
-import path from 'path';
-import webpack from 'webpack';
-import autoprefixer from 'autoprefixer';
-import precss from 'precss';
+var path = require('path');
+var webpack = require('webpack');
+var autoprefixer = require('autoprefixer');
+var precss = require('precss');
 
 module.exports = {
     devtool: 'cheap-module-eval-source-map',
@@ -20,15 +20,15 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin()
     ],
     module: {
-        preLoaders: [
-            {
-                test: /\.js$/,
-                loaders: ['eslint'],
-                include: [
-                    path.resolve(__dirname, "src"),
-                ],
-            }
-        ],
+        // preLoaders: [
+        //     {
+        //         test: /\.js$/,
+        //         loaders: ['eslint'],
+        //         include: [
+        //             path.resolve(__dirname, "src"),
+        //         ],
+        //     }
+        // ],
         loaders: [
             {
                 loaders: ['react-hot', 'babel-loader'],
@@ -39,7 +39,7 @@ module.exports = {
                 plugins: ['transform-runtime'],
             },
             {
-                test: /\.css$/,
+                test:   /\.css$/,
                 loader: "style-loader!css-loader!postcss-loader"
             }
         ]
