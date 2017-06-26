@@ -9,8 +9,14 @@
   },
   "parser": "babel-eslint",
   "rules": {
-    "quotes": [1, "single"],
-    "strict": [1, "never"],
+    "quotes": [
+      1,
+      "single"
+    ],
+    "strict": [
+      1,
+      "never"
+    ],
     "babel/generator-star-spacing": 1,
     "babel/new-cap": 1,
     "babel/object-shorthand": 1,

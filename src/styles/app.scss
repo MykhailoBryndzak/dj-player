@@ -1,0 +1,160 @@
+//uploadfile
+.songs-loader {
+  width: 100%;
+  //background: #eee;
+  border: 1px dashed #aaa;
+  padding: 10px;
+  overflow: auto;
+  margin: 10px;
+  position: relative;
+
+  .title {
+    text-align: center;
+  }
+
+  .hint {
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+    color: #aaa;
+
+    span {
+      font-weight: bold;
+      color: #777;
+    }
+  }
+
+  .song {
+    margin: 5px;
+    font-size: 12px;
+    cursor: pointer;
+
+    &:hover {
+      background: #ccc;
+    }
+  }
+}
+//
+
+//
+.upload-page {
+  .dropzones {
+    display: flex;
+    height: 200px;
+  }
+
+  .controls {
+    text-align: center;
+    margin: 10px;
+  }
+}
+//
+
+.player-button {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  box-shadow: 0 10px #aaa;
+  outline: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  &:active:not(:disabled), &.active {
+    box-shadow: 0 5px #888;
+    transform: translateY(5px);
+  }
+}
+//
+.slider {
+  width: 100%;
+}
+//
+.songs-player {
+  padding: 5px;
+
+  .controls {
+    display: flex;
+    justify-content: space-between;
+  }
+  .buttons {
+    margin-left: 70px;
+    float: left;
+  }
+  .player-display {
+    display: flex;
+    padding: 5px;
+
+    .song-number {
+      padding: 5px;
+      width: 60px;
+      text-align: center;
+      margin-right: 5px;
+    }
+
+    .song-name {
+      padding: 5px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: calc(100% - 30px);
+    }
+  }
+}
+//
+.song-timeline {
+  padding: 5px;
+
+  .timers {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+//
+.song-volume {
+  float: left;
+  margin-left: 40px;
+  width: 150px;
+
+  .value {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+//
+.dj-panel-page {
+  min-width: 900px;
+
+  .players {
+    display: flex;
+    margin-bottom: 15px;
+
+    .player {
+      width: 50%;
+      border-left: 1px solid black;
+      height: 100%;
+    }
+  }
+
+  .common-controls {
+    height: 127px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .controls {
+    padding: -100px;
+    text-align: center;
+
+    .reset-warning {
+      color: #f44336;
+      font-size: 10px;
+    }
+  }
+}
+
+#app {
+  overflow: auto;
+}

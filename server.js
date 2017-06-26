@@ -7,26 +7,26 @@ var config = require('./webpack.config');
 const bundler = webpack(config);
 
 browserSync({
-  port: 3000,
-  open: false,
-  server: {
-    baseDir: 'src',
-    middleware: [
-      webpackDevMiddleware(bundler, {
-        publicPath: config.output.publicPath,
-        noInfo: false,
-        quiet: true,
-        stats: {
-          assets: false,
-          colors: true,
-          version: false,
-          hash: false
-        }
-      }),
-      webpackHotMiddleware(bundler)
+    port: 3000,
+    open: false,
+    server: {
+        baseDir: 'src',
+        middleware: [
+            webpackDevMiddleware(bundler, {
+                publicPath: config.output.publicPath,
+                noInfo: false,
+                quiet: true,
+                stats: {
+                    assets: false,
+                    colors: true,
+                    version: false,
+                    hash: false
+                }
+            }),
+            webpackHotMiddleware(bundler)
+        ]
+    },
+    files: [
+        'src/*.html'
     ]
-  },
-  files: [
-    'src/*.html'
-  ]
 });
